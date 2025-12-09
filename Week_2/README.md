@@ -1,65 +1,55 @@
 # Housing Price Prediction
 
 ## Overview
-This project is a **Machine Learning pipeline** for predicting housing prices using a dataset containing features such as area, bedrooms, bathrooms, and amenities. It demonstrates **data preprocessing, feature engineering, linear regression modeling, and evaluation**, along with visualization of predictions versus actual prices.
+This project implements a clean and efficient **Machine Learning pipeline** for predicting housing prices based on property features such as area, bedrooms, bathrooms, and available amenities. It highlights practical skills in **data preprocessing, feature engineering, model training, evaluation, and visualization** using Python.
 
-The pipeline is implemented in Python using `pandas`, `scikit-learn`, and `matplotlib`.
-
----
-
-## Features and Engineering
-The following steps are applied to the dataset to improve prediction accuracy:
-
-- **Guestroom Conversion:** Convert 'yes'/'no' values to numeric 1/0 for calculations.
-- **Total Rooms:** Sum of bedrooms, bathrooms, and guestroom for a more representative feature.
-- **Area per Story:** Compute `area / stories` to capture the space distribution per floor.
-- **Categorical Encoding:** One-hot encoding applied to categorical features including `mainroad`, `guestroom`, `basement`, `hotwaterheating`, `airconditioning`, `prefarea`, and `furnishingstatus`.
+The project uses **pandas**, **scikit-learn**, and **matplotlib** to build and analyze the model.
 
 ---
 
-## Data Preprocessing
-- Numerical features are kept as-is.
-- Categorical features are transformed using `OneHotEncoder` with `drop='first'` to avoid multicollinearity.
-- Train-test split: 80% training, 20% testing (`random_state=42` for reproducibility).
+## Features
+The pipeline includes:
 
----
-
-## Model
-- **Algorithm:** Linear Regression (`sklearn.linear_model.LinearRegression`)
-- **Training:** Model is trained on the preprocessed training data.
-- **Evaluation Metrics:**
-  - Mean Absolute Error (MAE)
+- **Dataset preprocessing** and handling of mixed categorical/numerical features.
+- **Feature engineering**, including:
+  - Converting "yes"/"no" values into numeric format.
+  - Creating `total_rooms` and `area_per_story` for better feature representation.
+  - Applying **one-hot encoding** to categorical attributes.
+- **Train–test splitting** for model validation.
+- **Linear Regression model training** using scikit-learn.
+- **Model evaluation** with:
+  - Mean Absolute Error (MAE)  
   - Mean Squared Error (MSE)
-  
----
-
-## Visualization
-- Scatter plot of actual vs. predicted prices.
-- Diagonal reference line to visualize prediction accuracy.
+- **Visualization** showing actual vs. predicted housing prices.
 
 ---
 
-## Usage
-1. Ensure Python 3.x is installed.
-2. Install required packages:
-   ```bash
-   pip install pandas scikit-learn matplotlib
-3. Place the dataset `Housing.csv` in the same directory as the script.
-
-4. Run the script:
-```bash
-    python housing_price_prediction.py
-
-## Output
-
-- The first 10 predictions vs. actual prices will be printed in the console.
-- A scatter plot will be displayed showing predicted prices versus actual prices.
+## Technologies Used
+- **Python 3**
+- **pandas**
+- **scikit-learn**
+- **matplotlib**
 
 ---
 
-## Dependencies
+## How to Run
+1. Clone the repository:
+```
+  git clone https://github.com/josi1219/gdsc_study_session_ML_g1.git
+```
+2. Navigate to the `Week_2` folder:
+```
+  cd gdsc_study_session_ML_g1/Week_2
+```
+3. Install required packages if not already installed:
 
-- `pandas`
-- `scikit-learn`
-- `matplotlib`
+```
+  pip install pandas scikit-learn matplotlib
+```
+4. Run the Python script:
+
+```
+python housing_price_prediction.py
+```
+
 
