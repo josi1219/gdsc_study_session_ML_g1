@@ -51,5 +51,37 @@ The pipeline includes:
 ```
 python housing_price_prediction.py
 ```
+## Output
+
+When you run the script, it generates both **text-based results** and a **visual plot**:
+
+### **1. Console Output**
+The program prints the **first 10 predicted prices** alongside their corresponding **actual prices** from the test set.  
+This allows quick inspection of how closely the model is performing on unseen data.
+
+
+### **2. Performance Metrics**
+The model evaluation includes:
+
+- **Mean Absolute Error (MAE)**  
+- **Mean Squared Error (MSE)**  
+
+These metrics provide insight into how accurate the predictions are and help compare future model improvements.
+
+### **3. Visualization**
+A **scatter plot** is displayed showing:
+
+- **Actual prices** on the x-axis  
+- **Predicted prices** on the y-axis  
+- A **diagonal reference line** (perfect prediction line)
+
+This visualization helps you understand:
+
+- How close predictions are to actual values  
+- Whether the model systematically overestimates or underestimates prices  
+- The overall spread and accuracy of the model  
+
+This makes it useful for quickly diagnosing performance and identifying potential areas for feature improvement or model tuning.
+
 
 
